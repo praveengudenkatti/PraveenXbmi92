@@ -1,0 +1,216 @@
+/* ===== PRAVEEN HACKER THEME ===== */
+
+:root {
+  --bg: #020806;
+  --bg-2: #06140e;
+  --surface: rgba(0,255,100,0.05);
+  --surface-2: rgba(0,255,100,0.10);
+  --border: rgba(0,255,100,0.20);
+  --border-glow: rgba(0,255,100,0.7);
+
+  --primary: #00ff66;
+  --primary-2: #00ffaa;
+  --primary-3: #00ccff;
+  --accent: #b6ff00;
+  --cyan: #00ffff;
+
+  --text: #eafff0;
+  --text-2: #9bc9aa;
+  --text-3: #56836a;
+
+  --grad-1: linear-gradient(
+    135deg,#00ff66,#00ffaa,#00ccff
+  );
+
+  --grad-2: linear-gradient(
+    135deg,#00ff66,#00ccff
+  );
+
+  --grad-3: linear-gradient(
+    135deg,#00ffff,#00ff66,#00ffaa
+  );
+}
+
+/* Hacker Background */
+
+body {
+  background: #020806;
+  color: #eafff0;
+}
+
+body::before {
+  background:
+    radial-gradient(
+      ellipse at 15% 10%,
+      rgba(0,255,100,.20),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 85% 25%,
+      rgba(0,255,255,.15),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 50% 95%,
+      rgba(0,255,100,.12),
+      transparent 55%
+    );
+}
+
+/* Hacker Grid */
+
+body::after {
+  background-image:
+    linear-gradient(rgba(0,255,100,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,255,100,.04) 1px,transparent 1px);
+
+  background-size: 35px 35px;
+  opacity: .6;
+}
+
+/* Logo */
+
+.logo-mark {
+  background: linear-gradient(135deg,#00ff66,#00ccff);
+  box-shadow: 0 0 25px #00ff6680;
+  border-radius: 12px;
+}
+
+/* Navigation */
+
+.nav-menu {
+  background: rgba(0,255,100,.04);
+  border-color: rgba(0,255,100,.2);
+}
+
+.nav-menu a.active {
+  background: linear-gradient(135deg,#00ff66,#00ffaa);
+  color: #001b0b;
+  box-shadow: 0 0 20px #00ff6670;
+}
+
+/* Hero Heading */
+
+.hero-title .grad {
+  background: linear-gradient(
+    90deg,#00ff66,#00ffff,#00ff66
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: hackerText 4s linear infinite;
+}
+
+@keyframes hackerText {
+  to { background-position: 200% center; }
+}
+
+/* Buttons */
+
+.btn-primary {
+  background: linear-gradient(135deg,#00ff66,#00ccff);
+  color: #001b0b;
+  box-shadow: 0 0 25px #00ff6655;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 35px #00ff66;
+}
+
+.btn-ghost:hover {
+  border-color: #00ff66;
+  box-shadow: 0 0 20px #00ff6633;
+}
+
+/* Profile Glow */
+
+.profile-photo-wrap {
+  background: conic-gradient(
+    #00ff66,
+    #00ffff,
+    #00ff66,
+    #00ccff,
+    #00ff66
+  );
+
+  box-shadow:
+    0 0 40px #00ff6670,
+    0 0 100px #00ffff30;
+}
+
+/* Orbit Rings */
+
+.orbit-ring.ring-2 {
+  border-color: rgba(0,255,100,.4);
+}
+
+.orbit-ring.ring-3 {
+  border-color: rgba(0,255,255,.3);
+}
+
+/* Floating Badges */
+
+.float-badge,
+.team-badge {
+  background: rgba(0,15,8,.95);
+  border: 1px solid rgba(0,255,100,.4);
+  box-shadow: 0 0 25px #00ff6620;
+}
+
+/* Sections */
+
+.about-main {
+  background: rgba(0,255,100,.035);
+  border: 1px solid rgba(0,255,100,.2);
+  box-shadow: 0 0 30px rgba(0,255,100,.04);
+}
+
+.section-tag {
+  color: #00ff88;
+  background: rgba(0,255,100,.08);
+  border-color: rgba(0,255,100,.3);
+}
+
+/* Hacker Selection */
+
+::selection {
+  background: #00ff66;
+  color: #001b0b;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#00ff66,#00ccff);
+}
+
+/* Neon Hover */
+
+.about-main:hover {
+  border-color: #00ff66;
+  box-shadow: 0 0 30px #00ff6625;
+  transform: translateY(-5px);
+}
+
+/* Mobile */
+
+@media(max-width:768px) {
+  .container {
+    padding: 0 18px;
+  }
+
+  .hero {
+    padding-top: 120px;
+  }
+
+  .profile-stage {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 65px;
+  }
+}
